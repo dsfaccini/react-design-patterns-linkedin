@@ -19,16 +19,15 @@ const RightHandComponent = () => {
 
 const appProps = {
 	leftWeight: 1,
-	rightWeight: 3
+	rightWeight: 3,
+	leftNode: LeftHandComponent,
+	rightNode: RightHandComponent
 };
 
 function App() {
-	return (
-		<SplitScreen {...appProps}>
-			<LeftHandComponent></LeftHandComponent>
-			<RightHandComponent></RightHandComponent>
-		</SplitScreen>
-	);
+	// <LeftHandComponent></LeftHandComponent>
+	// <RightHandComponent></RightHandComponent>
+	return <SplitScreen {...appProps}></SplitScreen>;
 }
 
 export default App;

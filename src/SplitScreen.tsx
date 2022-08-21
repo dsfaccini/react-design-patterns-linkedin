@@ -20,13 +20,20 @@ interface SplitScreenProps {
 	// extends PropsWithChildren {
 	leftWeight: number;
 	rightWeight: number;
+	leftNode: React.ElementType;
+	rightNode: React.ElementType;
 	// children?: React.ReactNode;
-	children: React.ElementType[];
+	// children: React.ElementType[];
 }
 
-// export const SplitScreen: React.FC<PropsWithChildren<SplitScreenProps>> = ({ leftWeight, rightWeight, children }) => {
-export const SplitScreen = ({ leftWeight, rightWeight, children }: SplitScreenProps) => {
-	const [Left, Right] = children;
+// export const SplitScreen = ({ leftWeight, rightWeight, children }: SplitScreenProps) => {
+// const [Left, Right] = React.Children.toArray(children);
+export const SplitScreen = ({
+	leftWeight,
+	rightWeight,
+	leftNode: Left,
+	rightNode: Right
+}: SplitScreenProps) => {
 	return (
 		<Container>
 			<Pane weight={leftWeight}>
